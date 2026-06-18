@@ -40,7 +40,7 @@ body {
   max-width: 384px;                  /* Ancho máximo de la tarjeta */
   width: 100%;                       /* Responsivo para celulares */
   padding: 24px;    
-  padding-top: 35px;                 /* Espacio interior */
+  padding-top: 30px;                 /* Espacio interior */
   border: 3px solid var(--black);    /* Borde negro grueso */
   border-radius: 20px;               /* Esquinas redondeadas */
   
