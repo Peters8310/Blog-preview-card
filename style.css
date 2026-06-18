@@ -1,0 +1,152 @@
+/* ==========================================================================
+   1. CONFIGURACIÓN GENERAL Y VARIABLES
+   ========================================================================== */
+
+:root {
+  /* Design Tokens: Colores extraídos de tu guía de estilos */
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 42%);
+  --black: hsl(0, 0%, 7%);
+}
+
+/* Reseteo universal para limpiar márgenes raros de los navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+/* Configuración del fondo amarillo y centrado de la tarjeta */
+body {
+  font-family: 'Figtree', sans-serif; 
+  background-color: var(--yellow);   
+  min-height: 100vh;                 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;           /* Centrado vertical */
+  align-items: center;               /* Centrado horizontal */
+  gap: 24px;
+  padding: 24px;
+}
+
+/* ==========================================================================
+   2. EL COMPONENTE TARJETA (Neo-brutalismo)
+   ========================================================================== */
+
+.card {
+  background-color: var(--white);
+  max-width: 384px;                  /* Ancho máximo de la tarjeta */
+  width: 100%;                       /* Responsivo para celulares */
+  padding: 24px;                     /* Espacio interior */
+  border: 3px solid var(--black);    /* Borde negro grueso */
+  border-radius: 20px;               /* Esquinas redondeadas */
+  
+  /* Sombra rígida neo-brutalista */
+  box-shadow: 8px 8px 0px 0px var(--black); 
+  
+  display: flex;
+  flex-direction: column;
+  gap: 24px;                         
+}
+
+/* Ajustes de la ilustración */
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;               
+  display: block;
+}
+
+/* Contenedor del texto intermedio */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;           
+  gap: 12px;                         
+}
+  /* ==========================================================================
+   3. DETALLES INTERNOS Y TIPOGRAFÍA
+   ========================================================================== */
+
+/* La pequeña etiqueta amarilla de categoría (Learning) */
+.category-tag {
+  background-color: var(--yellow);
+  color: var(--black);
+  font-weight: 800;                  /* Aplica el grosor grueso cargado de Google Fonts */
+  font-size: 14px;
+  padding: 4px 12px;                 /* Espacio interno para que parezca un botón */
+  border-radius: 4px;                /* Esquinas levemente redondeadas */
+}
+
+/* La fecha de publicación */
+.publish-date {
+  font-size: 14px;
+  color: var(--black);
+  font-weight: 500;                  /* Grosor medio cargado de Google Fonts */
+}
+
+/* El título principal de la tarjeta */
+.card-title a {
+  color: var(--black);
+  text-decoration: none;             /* QUITA EL COLOR AZUL Y LA LÍNEA POR DEFECTO */
+  font-weight: 800;
+  font-size: 24px;
+  transition: color 0.2s ease;       /* Suaviza el cambio de color al pasar el mouse */
+}
+
+/* EFECTO INTERACTIVO (Hover): Se vuelve amarillo al pasar el cursor encima */
+.card-title a:hover {
+  color: var(--yellow);
+}
+
+/* La descripción del artículo */
+.card-description {
+  color: var(--grey);                /* Aplica el gris de la guía de estilos */
+  font-size: 16px;                   /* Tamaño base oficial */
+  line-height: 1.5;                  /* Da una separación perfecta entre líneas */
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   4. SECCIÓN DEL AUTOR (Alineación Horizontal)
+   ========================================================================== */
+.card-author {
+  display: flex;
+  align-items: center;               /* Centra verticalmente el avatar con el nombre */
+  gap: 12px;                         /* Separa la foto del nombre */
+}
+
+/* El avatar redondo del autor */
+.author-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;                /* Recorta la imagen en un círculo perfecto */
+}
+
+/* Nombre del autor */
+.author-name {
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--black);
+}
+
+/* ==========================================================================
+   5. CRÉDITOS FINALES
+   ========================================================================== */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--black);
+  margin-top: 12px;
+}
+
+.attribution a {
+  color: var(--grey);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
